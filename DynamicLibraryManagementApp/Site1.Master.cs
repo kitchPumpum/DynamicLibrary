@@ -13,7 +13,25 @@ namespace DynamicLibraryManagementApp
         {
             try
             {
-                if (Session["role"].Equals("User"))
+                if (Session["role"].Equals(""))
+                {
+                    lnkbtn_UserLogin.Visible = true; //login Link button
+                    lnkbtn_Signup.Visible = true; //Signup Link button
+
+                    lnkbtn_Logout.Visible = false; //Logout Link button
+                    lnkbtn_HelloUser.Visible = false; //HelloUser Link button
+
+                    //lnkbtn_HelloUser.Text = "Hello " + Session["full_name"].ToString();
+
+
+                    lnkbtn_AdminLogin.Visible = true; //AdminLogin Link button
+                    lnkbtn_AuthorManagement.Visible = false; //AuthorManagement Link button
+                    lnkbtn_PublisherManagement.Visible = false; //PublisherManagement Link button
+                    lnkbtnBookInventory.Visible = false; //BookInventory Link button
+                    lnkbtn_BookIssuing.Visible = false; //BookIssuing Link button
+                    lnkbtn_MemberManagement.Visible = false; //MemberManagement Link button
+                }
+                else if (Session["role"].Equals("User"))
                 {
                     lnkbtn_UserLogin.Visible = false; //login Link button
                     lnkbtn_Signup.Visible = false; //Signup Link button
@@ -29,7 +47,7 @@ namespace DynamicLibraryManagementApp
                     lnkbtn_PublisherManagement.Visible = false; //PublisherManagement Link button
                     lnkbtnBookInventory.Visible = false; //BookInventory Link button
                     lnkbtn_BookIssuing.Visible = false; //BookIssuing Link button
-                    lnkbtn_MemberManagement.Visible = false; //MemberManagement Link button
+                    //lnkbtn_MemberManagement.Visible = true; //MemberManagement Link button
                 }
                 else if (Session["role"].Equals("Admin"))
                 {
@@ -38,31 +56,14 @@ namespace DynamicLibraryManagementApp
 
                     lnkbtn_Logout.Visible = true; //Logout Link button
                     lnkbtn_HelloUser.Visible = true; //HelloUser Link button
-
-                    lnkbtn_HelloUser.Text = "Hello Admin " + Session["full_name"].ToString();
-
+                    lnkbtn_HelloUser.Text="Hello Admin";
 
                     lnkbtn_AdminLogin.Visible = false; //AdminLogin Link button
                     lnkbtn_AuthorManagement.Visible = true; //AuthorManagement Link button
                     lnkbtn_PublisherManagement.Visible = true; //PublisherManagement Link button
                     lnkbtnBookInventory.Visible = true; //BookInventory Link button
                     lnkbtn_BookIssuing.Visible = true; //BookIssuing Link button
-                    lnkbtn_MemberManagement.Visible = true; //MemberManagement Link button
-                }
-                else
-                {
-                    lnkbtn_UserLogin.Visible = true; //login Link button
-                    lnkbtn_Signup.Visible = true; //Signup Link button
-
-                    lnkbtn_Logout.Visible = false; //Logout Link button
-                    lnkbtn_HelloUser.Visible = false; //HelloUser Link button
-
-                    lnkbtn_AdminLogin.Visible = true; //AdminLogin Link button
-                    lnkbtn_AuthorManagement.Visible = false; //AuthorManagement Link button
-                    lnkbtn_PublisherManagement.Visible = false; //PublisherManagement Link button
-                    lnkbtnBookInventory.Visible = false; //BookInventory Link button
-                    lnkbtn_BookIssuing.Visible = false; //BookIssuing Link button
-                    lnkbtn_MemberManagement.Visible = false; //MemberManagement Link button
+                    //lnkbtn_MemberManagement.Visible = false; //MemberManagement Link button
                 }
             }
             catch (Exception ex)
@@ -138,6 +139,11 @@ namespace DynamicLibraryManagementApp
             lnkbtn_MemberManagement.Visible = false; //MemberManagement Link button
 
             Response.Redirect("Homepage.aspx");
+        }
+
+        protected void lnkbtn_HelloUser_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("UserProfile.aspx");
         }
     }
 }

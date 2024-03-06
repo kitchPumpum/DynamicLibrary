@@ -70,7 +70,7 @@
                             </div>
 
                             <div class="col-md-6">
-                                <asp:Label ID="lbl_UserEmail" runat="server" Text="City"></asp:Label>
+                                <asp:Label ID="lbl_UserEmail" runat="server" Text="Email"></asp:Label>
                                 <div class="form-group">
                                     <asp:TextBox CssClass="form-control" ID="txt_UserEmail"
                                         runat="server" placeholder="Email" TextMode="Email"></asp:TextBox>
@@ -196,7 +196,7 @@
                                 <asp:Label ID="lbl_UserProfileOldPassword" runat="server" Text="Old Password"></asp:Label>
                                 <div class="form-group">
                                     <asp:TextBox class="form-control" ID="txt_UserProfileOldPassword"
-                                        runat="server" placeholder="Old Password" TextMode="Password" ReadOnly="True"></asp:TextBox>
+                                        runat="server" placeholder="Old Password" ReadOnly="True"></asp:TextBox>
                                 </div>
                             </div>
 
@@ -216,7 +216,7 @@
                                 <center>
                                     <div class="form-group">
                                         <asp:Button ID="btn_UserProfileUpdate" CssClass="btn btn-primary btn-block btn-lg"
-                                            runat="server" Text="Update" />
+                                            runat="server" Text="Update" OnClick="btn_UserProfileUpdate_Click"/>
                                     </div>
                                 </center>
                             </div>
@@ -269,7 +269,7 @@
                         <div class="row">
                             <div class="col">
                                 <asp:GridView CssClass="table table-striped table-bordered"
-                                    ID="gv_UserProfile" runat="server">
+                                    ID="gv_UserProfile" runat="server" OnRowDataBound="gv_UserProfile_RowDataBound">
                                 </asp:GridView>
                             </div>
                         </div>

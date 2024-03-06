@@ -113,6 +113,6 @@ C:\PROJECT\DotNet\DynamicLibraryManagementApp\DynamicLibraryManagementApp\bin\Mi
 C:\PROJECT\DotNet\DynamicLibraryManagementApp\DynamicLibraryManagementApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\PROJECT\DotNet\DynamicLibraryManagementApp\DynamicLibraryManagementApp\obj\Debug\DynamicLibraryManagementApp.csproj.AssemblyReference.cache
 C:\PROJECT\DotNet\DynamicLibraryManagementApp\DynamicLibraryManagementApp\obj\Debug\DynamicLibraryManagementApp.csproj.CoreCompileInputs.cache
-C:\PROJECT\DotNet\DynamicLibraryManagementApp\DynamicLibraryManagementApp\obj\Debug\DynamicLibraryManagementApp.csproj.CopyComplete
 C:\PROJECT\DotNet\DynamicLibraryManagementApp\DynamicLibraryManagementApp\obj\Debug\DynamicLibraryManagementApp.dll
 C:\PROJECT\DotNet\DynamicLibraryManagementApp\DynamicLibraryManagementApp\obj\Debug\DynamicLibraryManagementApp.pdb
+C:\PROJECT\DotNet\DynamicLibraryManagementApp\DynamicLibraryManagementApp\obj\Debug\DynamicL.3020CB45.Up2Date

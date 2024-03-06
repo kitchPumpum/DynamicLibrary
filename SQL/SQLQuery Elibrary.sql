@@ -53,3 +53,4 @@ select * from member_master_tbl
 --edition='',book_cost='',no_of_pages='',book_description='',actual_stock='',current_stock='',book_img_link=''
 --WHERE book_id=''
 
+select * from book_issue_tbl where member_id=
