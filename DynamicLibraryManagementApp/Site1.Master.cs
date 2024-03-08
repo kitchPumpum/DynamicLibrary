@@ -13,7 +13,7 @@ namespace DynamicLibraryManagementApp
         {
             try
             {
-                if (Session["role"].Equals(""))
+                if (Session["role"] != null && Session["role"].Equals(""))
                 {
                     lnkbtn_UserLogin.Visible = true; //login Link button
                     lnkbtn_Signup.Visible = true; //Signup Link button
@@ -31,7 +31,7 @@ namespace DynamicLibraryManagementApp
                     lnkbtn_BookIssuing.Visible = false; //BookIssuing Link button
                     lnkbtn_MemberManagement.Visible = false; //MemberManagement Link button
                 }
-                else if (Session["role"].Equals("User"))
+                else if (Session["role"] != null && Session["role"].Equals("User"))
                 {
                     lnkbtn_UserLogin.Visible = false; //login Link button
                     lnkbtn_Signup.Visible = false; //Signup Link button
@@ -49,7 +49,7 @@ namespace DynamicLibraryManagementApp
                     lnkbtn_BookIssuing.Visible = false; //BookIssuing Link button
                     //lnkbtn_MemberManagement.Visible = true; //MemberManagement Link button
                 }
-                else if (Session["role"].Equals("Admin"))
+                else if (Session["role"] != null && Session["role"].Equals("Admin"))
                 {
                     lnkbtn_UserLogin.Visible = false; //login Link button
                     lnkbtn_Signup.Visible = false; //Signup Link button

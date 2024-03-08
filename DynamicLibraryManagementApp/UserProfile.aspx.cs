@@ -156,20 +156,20 @@ namespace DynamicLibraryManagementApp
                 }
 
 
-                SqlCommand cmd = new SqlCommand("update member_master_tbl set full_name=@full_name, dob=@dob, contact_no=@contact_no, " +
+                SqlCommand cmd = new SqlCommand("update member_master_tbl set full_name=@full_name, dob=@dob, contract_no=@contact_no, " +
                     "email=@email, state=@state, city=@city, zipcode=@zipcode, full_address=@full_address, password=@password, " +
                     "account_status=@account_status WHERE member_id='" + Session["member_id"].ToString().Trim() + "'", con);
 
-                cmd.Parameters.AddWithValue("@full_name", txt_UserFullName.Text.Trim());
-                cmd.Parameters.AddWithValue("@dob", txt_UserDateofBirth.Text.Trim());
-                cmd.Parameters.AddWithValue("@contact_no", txt_UserContractNumber.Text.Trim());
-                cmd.Parameters.AddWithValue("@email", txt_UserEmail.Text.Trim());
-                cmd.Parameters.AddWithValue("@state", dd_UserState.SelectedItem.Value);
-                cmd.Parameters.AddWithValue("@city", txt_UserCity.Text.Trim());
-                cmd.Parameters.AddWithValue("@zipcode", txt_UserZipCode.Text.Trim());
-                cmd.Parameters.AddWithValue("@full_address", txt_UserFullAddress.Text.Trim());
+                cmd.Parameters.AddWithValue("@full_name", txt_UserFullName.Text.ToString().Trim());
+                cmd.Parameters.AddWithValue("@dob", txt_UserDateofBirth.Text.ToString().Trim());
+                cmd.Parameters.AddWithValue("@contact_no", txt_UserContractNumber.Text.ToString().Trim());
+                cmd.Parameters.AddWithValue("@email", txt_UserEmail.Text.ToString().Trim());
+                cmd.Parameters.AddWithValue("@state", dd_UserState.SelectedItem.Value.ToString().Trim());
+                cmd.Parameters.AddWithValue("@city", txt_UserCity.Text.ToString().Trim());
+                cmd.Parameters.AddWithValue("@zipcode", txt_UserZipCode.Text.ToString().Trim());
+                cmd.Parameters.AddWithValue("@full_address", txt_UserFullAddress.Text.ToString().Trim());
                 cmd.Parameters.AddWithValue("@password", password);
-                cmd.Parameters.AddWithValue("@account_status", "pending");
+                cmd.Parameters.AddWithValue("@account_status", "Pending");
 
                 int result = cmd.ExecuteNonQuery();
                 con.Close();
