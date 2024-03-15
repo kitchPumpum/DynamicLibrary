@@ -13,6 +13,22 @@ namespace DynamicLibraryManagementApp
         {
             try
             {
+                lnkbtn_UserLogin.Visible = true; //login Link button
+                lnkbtn_Signup.Visible = true; //Signup Link button
+
+                lnkbtn_Logout.Visible = false; //Logout Link button
+                lnkbtn_HelloUser.Visible = false; //HelloUser Link button
+
+                //lnkbtn_HelloUser.Text = "Hello " + Session["full_name"].ToString();
+
+
+                lnkbtn_AdminLogin.Visible = true; //AdminLogin Link button
+                lnkbtn_AuthorManagement.Visible = false; //AuthorManagement Link button
+                lnkbtn_PublisherManagement.Visible = false; //PublisherManagement Link button
+                lnkbtnBookInventory.Visible = false; //BookInventory Link button
+                lnkbtn_BookIssuing.Visible = false; //BookIssuing Link button
+                lnkbtn_MemberManagement.Visible = false; //MemberManagement Link button
+
                 if (Session["role"] != null && Session["role"].Equals(""))
                 {
                     lnkbtn_UserLogin.Visible = true; //login Link button
@@ -56,7 +72,7 @@ namespace DynamicLibraryManagementApp
 
                     lnkbtn_Logout.Visible = true; //Logout Link button
                     lnkbtn_HelloUser.Visible = true; //HelloUser Link button
-                    lnkbtn_HelloUser.Text="Hello Admin";
+                    lnkbtn_HelloUser.Text="Hello Admin " + Session["full_name"].ToString();
 
                     lnkbtn_AdminLogin.Visible = false; //AdminLogin Link button
                     lnkbtn_AuthorManagement.Visible = true; //AuthorManagement Link button
